@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // route to survey
-app.get("/app/public/survey.html", function (req, res) {
+app.get("/survey", function (req, res) {
     res.sendFile(path.join(__dirname, "survey.html"));
 });
 
