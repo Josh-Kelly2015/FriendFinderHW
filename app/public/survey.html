@@ -10,6 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,7 +36,7 @@
         <h2><strong>SURVERY SAYS...</strong></h2>
         <h3><strong>Question 1</strong></h3>
         <h4>You enjoy spending your time outdoors, rather than inside</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="questionOne">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -38,7 +47,7 @@
 
         <h3><strong>Question 2</strong></h3>
         <h4>A good book is always better than Netflix, or Hulu</h4>
-        <select class="chosen-select" id="q2">
+        <select class="chosen-select" id="questionTwo">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -50,7 +59,7 @@
 
         <h3><strong>Question 3</strong></h3>
         <h4>You have many hobbies that keep you busy and active.</h4>
-        <select class="chosen-select" id="q3">
+        <select class="chosen-select" id="questionThree">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -62,7 +71,7 @@
 
         <h3><strong>Question 4</strong></h3>
         <h4>You enjoy learning new things about people, and places.</h4>
-        <select class="chosen-select" id="q4">
+        <select class="chosen-select" id="questionFour">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -74,7 +83,7 @@
 
         <h3><strong>Question 5</strong></h3>
         <h4>Consistent communication is key to a successful relationship.</h4>
-        <select class="chosen-select" id="q5">
+        <select class="chosen-select" id="questionFive">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -86,7 +95,7 @@
 
         <h3><strong>Question 6</strong></h3>
         <h4>Walking through the woods is better than a stroll through the city.</h4>
-        <select class="chosen-select" id="q6">
+        <select class="chosen-select" id="questionSix">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -98,7 +107,7 @@
 
         <h3><strong>Question 7</strong></h3>
         <h4>Go Karting is more fun for a date than dinner.</h4>
-        <select class="chosen-select" id="q7">
+        <select class="chosen-select" id="questionSeven">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -109,7 +118,7 @@
 
         <h3><strong>Question 8</strong></h3>
         <h4>Tattoos don't bother you(except face tattoos. Those bother everyone)</h4>
-        <select class="chosen-select" id="q8">
+        <select class="chosen-select" id="questionEight">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -120,7 +129,7 @@
 
         <h3><strong>Question 9</strong></h3>
         <h4>Being in a committed relationship is more ideal than multiple flings.</h4>
-        <select class="chosen-select" id="q9">
+        <select class="chosen-select" id="questionNine">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -131,7 +140,7 @@
 
         <h3><strong>Question 10</strong></h3>
         <h4>Loving yourself comes before loving anyone else.</h4>
-        <select class="chosen-select" id="q10">
+        <select class="chosen-select" id="questionTen">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -144,13 +153,13 @@
 
         <button type="submit" class="btn btn-danger btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
                 aria-hidden="true"></i>
-            Submit</button>
+            Find Your Person!!</button>
 
         <hr>
         <footer class="footer">
             <div class="container">
                 <p>
-                    <a href="/api/friends">API Friends List</a>
+                    <a href="../data/friends.js">API Friends List</a>
                     ||
                     <a href="https://github.com/Josh-Kelly2015/FriendFinderHW">GitHub Repo</a>
                 </p>
@@ -159,7 +168,7 @@
 
     </div>
 
-    <div id="results-modal" class="modal fade" role="dialog">
+    <div id="results" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
 
@@ -169,9 +178,8 @@
                     <h2 class="modal-title"><strong>Most Compatible Match</strong></h2>
                 </div>
                 <div class="modal-body">
-                    <h2 id="match-name"></h2>
-                    <img id="match-img"
-                        src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                    <h2 id="matchName"></h2>
+                    <img id="matchImage">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -181,7 +189,66 @@
         </div>
     </div>
 
-    <script src="" async defer></script>
+    <script type="text/javascript">
+        // Capture the form inputs
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            // Form validation
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+
+                $(".chosen-select").each(function () {
+
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
+            // If all required fields are filled
+            if (validateForm()) {
+                // Create an object for the user"s data
+                var matchData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#questionOne").val(),
+                        $("#questionTwo").val(),
+                        $("#questionThree").val(),
+                        $("#questionFour").val(),
+                        $("#questionFive").val(),
+                        $("#questionSix").val(),
+                        $("#questionSeven").val(),
+                        $("#questionEight").val(),
+                        $("#questionNine").val(),
+                        $("#questionTen").val()
+                    ]
+                };
+                console.log(matchData);
+                // AJAX post the data to the friends API.
+                $.post("../data/friends.js", matchData, function (data) {
+
+                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                    $("#matchName").text(data.name);
+                    $("#matchImage").attr("src", data.photo);
+
+                    // Show the modal with the best match
+                    $("#results").modal("toggle");
+
+                });
+            } else {
+                alert("FIll out all fields to find your best match!");
+            }
+        });
+
+    </script>
 </body>
 
 </html>

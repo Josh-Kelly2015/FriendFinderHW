@@ -1,8 +1,11 @@
 // save my apps data here. 
-var matchData =
+var friends =
 {
   "name": "",
-  "photo":"",
+  "photo": "",
   "scores": [
+
   ]
 };
+
+module.exports = friends
