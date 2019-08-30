@@ -7,7 +7,7 @@ module.exports = function (app) {
     });
     console.log(friends);
     app.post("/api/friends", function (req, res) {
-
+        // this is where i will parse my user data and apply js logic to compare and find the best match for the user
     })
 }
 
