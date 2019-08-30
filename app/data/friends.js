@@ -8,4 +8,4 @@ var friends =
   ]
 };
 
-module.exports = friends
+module.exports = friends;
